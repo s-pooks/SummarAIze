@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VoiceNotes AI</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-container">
+
+    <aside class="sidebar">
+      <h2>VoiceNotes</h2>
+      <nav>
+        <a href="#" id="navRecord"><i class="fas fa-microphone"></i> Record</a>
+        <a href="#" id="navLectures"><i class="fas fa-book"></i> Lectures</a>
+        <a href="#" id="navNotes"><i class="fas fa-sticky-note"></i> Notes</a>
+        <a href="#" id="navGoals"><i class="fas fa-bullseye"></i> Daily Goals</a>
+        <a href="#" id="navGames"><i class="fas fa-gamepad"></i> Mind Games</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header>
+        <input type="text" id="searchInput" placeholder="Search lectures..." />
+      </header>
+
+      <section class="controls">
+        <button id="recordBtn"><i class="fas fa-microphone"></i> Start Recording</button>
+        <input type="text" id="lectureTitle" placeholder="Lecture Title" />
+        <button id="saveBtn"><i class="fas fa-save"></i> Save Lecture</button>
+        <button id="exportBtn"><i class="fas fa-file-pdf"></i> Export All</button>
+        <button id="translateBtn"><i class="fas fa-language"></i> Translate</button>
+        <button id="quizBtn"><i class="fas fa-question"></i> Quiz</button>
+      </section>
+
+      <section class="notes-section">
+        <h2>Your Lectures</h2>
+        <div id="notesList"></div>
+      </section>
+
+      <section id="notesTools" class="hidden">
+        <h2>Notes Tools</h2>
+        <button id="createNote">Create Note</button>
+        <button id="makeFlashcards">Generate Flashcards</button>
+        <button id="createFlowchart">Generate Flowchart</button>
+        <div id="userNotes"></div>
+      </section>
+
+      <section id="dailyGoals" class="hidden">
+        <h2>Daily Goals</h2>
+        <input type="text" id="goalInput" placeholder="Set your goal...">
+        <button id="addGoal">Add Goal</button>
+        <ul id="goalList"></ul>
+        <div class="timer">
+          <span id="timeDisplay">00:00</span>
+          <button id="startTimer">Start</button>
+          <button id="stopTimer">Stop</button>
+        </div>
+      </section>
+
+      <section id="mindGames" class="hidden">
+        <h2>Memory Match</h2>
+        <div class="game-grid" id="gameGrid"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
